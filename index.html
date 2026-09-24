@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101b24" />
+  <meta name="description" content="以几何，盛放光。透过六个连续视角，探索罗浮宫水晶金字塔的玻璃、金属、结构与光影。" />
+  <title>罗浮宫水晶金字塔 · Architecture in Light</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23101b24'/%3E%3Cpath d='M4 26L16 5l12 21H4m12-21v21M4 26l12-6 12 6' fill='none' stroke='%23c7ab78' stroke-width='1.4'/%3E%3C/svg%3E" />
+  <link rel="preload" as="image" href="./hero.webp" />
+  <link rel="stylesheet" href="./style.css" />
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至内容</a>
+  <div class="scene-stage" aria-hidden="true">
+    <div id="fallback-image"></div>
+    <canvas id="scene"></canvas>
+    <div class="scene-shade"></div>
+    <div class="edge-shade"></div>
+    <div class="grain"></div>
+  </div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="罗浮宫水晶金字塔，返回首页">
+      <span>罗浮宫水晶金字塔</span>
+      <small>ARCHITECTURE IN LIGHT</small>
+    </a>
+    <nav aria-label="章节导航">
+      <a href="#home" aria-current="location">首页</a><a href="#overview">概览</a><a href="#structure">结构</a><a href="#detail">细节</a><a href="#value">价值</a><a href="#explore">探索</a>
+    </nav>
+    <button id="motion-toggle" class="motion-toggle" aria-label="暂停环境动效" aria-pressed="false" title="暂停环境动效"><span class="pause-symbol" aria-hidden="true">Ⅱ</span></button>
+  </header>
+  <main id="main">
+    <section id="home" class="chapter hero" aria-labelledby="title-home" data-index="0">
+      <div class="chapter-content left">
+        <p class="eyebrow">01 / 光的序章</p>
+        <h1 id="title-home">以几何，<br>盛放光。</h1>
+        <p class="subject-name">罗浮宫水晶金字塔</p>
+        <p class="body-copy">玻璃与金属交织，让建筑成为光的容器。</p>
+        <a class="outline-button" href="#overview">开始探索 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section id="overview" class="chapter overview" aria-labelledby="title-overview" data-index="1">
+      <div class="chapter-content right">
+        <p class="eyebrow">02 / 整体概览</p>
+        <h2 id="title-overview">一座金字塔，<br>打开一座博物馆。</h2>
+        <p class="body-copy">透明的玻璃表皮，让光线穿过几何网格。<br class="desktop-break">清晰的轮廓，与宫殿立面形成鲜明对话。</p>
+        <dl class="feature-list">
+          <div><span class="line-icon" aria-hidden="true">◇</span><dt>通透</dt><dd>玻璃与金属的轻盈组合</dd></div>
+          <div><span class="line-icon" aria-hidden="true">△</span><dt>秩序</dt><dd>方形基底与三角立面</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section id="structure" class="chapter structure" aria-labelledby="title-structure" data-index="2">
+      <div class="chapter-content left">
+        <p class="eyebrow">03 / 外部结构</p>
+        <h2 id="title-structure">透明之下，<br>秩序可见。</h2>
+        <p class="body-copy">从外部形态，读懂建筑的几何逻辑。</p>
+        <div class="layer-controls" role="group" aria-label="观察结构层次">
+          <button data-layer="all" aria-pressed="true">全貌</button>
+          <button data-layer="glass" aria-pressed="false">玻璃</button>
+          <button data-layer="frame" aria-pressed="false">网格</button>
+        </div>
+        <p class="diagram-note">表皮分层示意 · 非施工拆解</p>
+      </div>
+      <div class="annotations">
+        <div class="annotation a1"><p><b>01</b> 玻璃表皮</p><span>通透的表面，映照天空与庭院。</span></div>
+        <div class="annotation a2"><p><b>02</b> 金属网格</p><span>交错的线条，勾勒立面的节奏。</span></div>
+        <div class="annotation a3"><p><b>03</b> 方形基底</p><span>四个三角立面，汇聚于同一顶点。</span></div>
+      </div>
+    </section>
+    <section id="detail" class="chapter detail" aria-labelledby="title-detail" data-index="3">
+      <div class="chapter-content right">
+        <p class="eyebrow">04 / 材质细节</p>
+        <h2 id="title-detail">在一片玻璃里，<br>看见整座庭院。</h2>
+        <p class="body-copy">光线穿过玻璃，倒影停留其上。<br>金属线条与透明表面，共同构成细腻的层次。</p>
+        <dl class="material-list"><div><dt>玻璃</dt><dd>通透与映照</dd></div><div><dt>网格</dt><dd>线条与节奏</dd></div></dl>
+        <button class="outline-button" id="detail-toggle" aria-pressed="false">观察细节 <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+    <section id="value" class="chapter value" aria-labelledby="title-value" data-index="4">
+      <div class="value-top">
+        <div><p class="eyebrow">05 / 建筑价值</p><h2 id="title-value">当古典，遇见现代。</h2></div>
+        <p class="body-copy">一座透明的几何体，<br>让庭院中的两种建筑语言彼此映照。</p>
+      </div>
+      <div class="value-columns">
+        <article><span>01</span><h3>古今对话</h3><p>简洁几何，与古典立面相互映衬。</p></article>
+        <article><span>02</span><h3>空间识别</h3><p>鲜明轮廓，成为庭院中的视觉焦点。</p></article>
+        <article><span>03</span><h3>光影体验</h3><p>玻璃与水面，让光影在空间中流动。</p></article>
+      </div>
+    </section>
+    <section id="explore" class="chapter explore" aria-labelledby="title-explore" data-index="5">
+      <div class="closing-copy"><p class="eyebrow">06 / 探索未止</p><h2 id="title-explore">让目光，继续向前。</h2><p class="body-copy">从一座金字塔，重新发现建筑与光的关系。</p><a class="outline-button" href="#home">重新探索 <span aria-hidden="true">↗</span></a></div>
+      <footer><span>罗浮宫水晶金字塔 · 建筑视觉专题</span><a href="https://www.aigcdavid.cn/" target="_blank" rel="noopener noreferrer">AIGC DAVID <span aria-hidden="true">↗</span></a><a href="#home">返回顶部 ↑</a></footer>
+    </section>
+  </main>
+  <div class="journey-ui"><a id="next-chapter" href="#overview"><span class="scroll-arrow" aria-hidden="true">↓</span><span id="scroll-label">向下滚动</span></a><div class="chapter-count"><span id="current-number">01</span><span class="count-line"></span><span>06</span></div></div>
+  <div id="load-status" role="status" aria-live="polite"><span class="load-dot"></span><span id="load-message">光影正在就位</span><button id="retry-load" hidden>重新加载</button></div>
+  <div class="view-controls"><span>拖动观察 · 滚动探索</span><button id="reset-view" hidden>恢复视角 ↺</button></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <noscript><style>#load-status{display:none}#fallback-image{opacity:1}</style><p class="noscript-note">当前显示静态建筑浏览。启用 JavaScript 可体验连续三维镜头。</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
